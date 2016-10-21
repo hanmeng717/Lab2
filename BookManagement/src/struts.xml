@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE struts PUBLIC "-//Apache Software Foundation//DTD Struts Configuration 2.1//EN" "http://struts.apache.org/dtds/struts-2.1.dtd">
+<struts>
+<include file="struts-default.xml"/>
+    <package name="alljava" extends="struts-default">       
+        <action name="AuthorNameSearch" method="Search" class="alljava.AuthorNameSearch">
+         <result name="OK">BookAuthorName.jsp</result>
+         <result name="ERROR">error.jsp</result>
+        </action>
+        <action name="ShowAllBook" method="Search" class="alljava.ShowAllBook">
+         <result name="OK">DisPlayAllBook.jsp</result>
+         <result name="ERROR">error.jsp</result>
+        </action>
+        <action name="DeleteBook" method="Delete" class="alljava.DeleteBook">
+         <result name="OK">DeleteSuccessfully.jsp</result>
+         <result name="ERROR">error.jsp</result>
+        </action>
+        <action name="ShowBookMessage" method="Search" class="alljava.ShowBookMessage">
+         <result name="OK">ShowMessage.jsp</result>
+         <result name="ERROR">error.jsp</result>
+        </action>
+        <action name="Add_Check_Author" method="Search" class="alljava.Add_Check_Author">
+         <result name="OK">AddBook.jsp</result>
+         <result name="IDAlreadyExits">AuthorIDAlreadyExits.jsp</result>
+         <result name="ERROR">error.jsp</result>
+        </action>
+        <action name="Add_Check_Book" method="Search" class="alljava.Add_Check_Book">
+         <result name="OK">AddBookSuccessfully.jsp</result>
+         <result name="isbnAlreadyExits">isbnAlreadyExits.jsp</result>
+         <result name="ERROR">error.jsp</result>
+        </action>
+        <action name="Update_Search" method="Search" class="alljava.Update_Search">
+         <result name="OK">Update.jsp</result>
+         <result name="ERROR">error.jsp</result>
+        </action>        
+        <action name="Update_CheckNewAuthor" method="Check" class="alljava.Update_CheckNewAuthor">
+         <result name="OK">UpdateSuccessfully.jsp</result>
+         <result name="newauthor">UpdateNewAuthor.jsp</result>
+         <result name="ERROR">error.jsp</result>
+        </action>
+        <action name="Update_NewAuthor" method="Search" class="alljava.Update_NewAuthor">
+         <result name="OK">UpdateNewAuthorAddSuccessfully.jsp</result>
+         <result name="ERROR">error.jsp</result>
+        </action>
+     </package>
+</struts> 
